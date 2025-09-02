@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter_fundamental/pages/my_stateful_widget_page.dart';
+import 'package:flutter_fundamental/pages/learning_path_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  
-
-
   const MyApp({super.key});
 
   @override
@@ -17,8 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const MyStatefulWidget(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const LearningPathScreen(),
     );
   }
 }
